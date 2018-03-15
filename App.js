@@ -4,6 +4,7 @@ import { StackNavigator } from 'react-navigation'
 import { DrawerNavigator } from 'react-navigation'
 import LoginScreen from './screens/LoginScreen'
 import HomeScreen from './screens/HomeScreen'
+import Notifications from './screens/Notifications'
 
 export default class App extends React.Component {
   render() {
@@ -19,8 +20,8 @@ export default class App extends React.Component {
 // })
 
 const AppDrawerNavigator = DrawerNavigator({
-  LoginScreen: { screen: LoginScreen },
-  HomeScreen: { screen: HomeScreen }
+  HomeScreen: { screen: HomeScreen },
+  Notifications: { screen: Notifications }
 })
 
 const styles = StyleSheet.create({

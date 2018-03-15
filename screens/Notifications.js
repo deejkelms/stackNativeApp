@@ -9,9 +9,8 @@ import {
   Left
 } from 'native-base'
 import { TabNavigator } from 'react-navigation'
-import Notifications from './Notifications'
 
-class HomeScreen extends Component {
+class Notifications extends Component {
   render() {
     return (
       <Container>
@@ -26,22 +25,22 @@ class HomeScreen extends Component {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <Text>Home Screen</Text>
+            <Text>Notifications</Text>
           </Content>
       </Container>
     )
   }
 }
 
-const HomeScreenTabNavigator = TabNavigator({
-  HomeScreen:{
-    screen: HomeScreen
-  },
-  Notifications:{
-    screen: Notifications
-  }
-}, {
-  animationEnabled: true
-})
+// const HomeScreenTabNavigator = TabNavigator({
+//   HomeScreen:{
+//     screen: HomeScreen
+//   },
+//   Notifications:{
+//     screen: Notifications
+//   }
+// }, {
+//   animationEnabled: true
+// })
 
-export default HomeScreenTabNavigator
+export default Notifications
