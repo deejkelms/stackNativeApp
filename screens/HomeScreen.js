@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View} from 'react-native'
+import { StyleSheet, Text, View, Image} from 'react-native'
 import {
   Icon,
   Button,
@@ -11,7 +11,15 @@ import {
 import { TabNavigator } from 'react-navigation'
 import Notifications from './Notifications'
 
-class HomeScreen extends Component {
+class Home extends Component {
+
+  static navigationOptions = {
+    drawerIcon:(
+      <Image source={require('../assets/002-home.png')}
+             style={{ height: 24, width: 24 }}
+      />
+    )
+  }
   render() {
     return (
       <Container>
@@ -26,7 +34,7 @@ class HomeScreen extends Component {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <Text>Home Screen</Text>
+            <Text>Home</Text>
           </Content>
       </Container>
     )
@@ -34,8 +42,8 @@ class HomeScreen extends Component {
 }
 
 const HomeScreenTabNavigator = TabNavigator({
-  HomeScreen:{
-    screen: HomeScreen
+  Home:{
+    screen: Home
   },
   Notifications:{
     screen: Notifications

@@ -6,7 +6,7 @@ import {
   Button
 } from 'react-native'
 import { StackNavigator } from 'react-navigation'
-import HomeScreen from './HomeScreen'
+import Home from './HomeScreen'
 
 
 class LoginScreen extends Component {
@@ -16,7 +16,7 @@ class LoginScreen extends Component {
     return (
       <View>
         <Text>Login</Text>
-        <Button onPress={() => navigate('HomeScreen')} title='Home'/>
+        <Button onPress={() => navigate('Home')} title='Home'/>
       </View>
     )
   }
@@ -26,8 +26,8 @@ const LoginStackNavigator = StackNavigator({
   LoginScreen:{
     screen: LoginScreen
   },
-  HomeScreen:{
-    screen: HomeScreen
+  Home:{
+    screen: Home
   }
 }, {
   animationEnabled: true

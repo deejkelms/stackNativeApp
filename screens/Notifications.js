@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View} from 'react-native'
+import { StyleSheet, Text, View, Image} from 'react-native'
 import {
   Icon,
   Button,
@@ -11,6 +11,15 @@ import {
 import { TabNavigator } from 'react-navigation'
 
 class Notifications extends Component {
+
+  static navigationOptions = {
+    drawerIcon:(
+      <Image source={require('../assets/001-bell.png')}
+             style={{height: 24, width: 24}}
+      />
+    )
+  }
+
   render() {
     return (
       <Container>
@@ -31,16 +40,5 @@ class Notifications extends Component {
     )
   }
 }
-
-// const HomeScreenTabNavigator = TabNavigator({
-//   HomeScreen:{
-//     screen: HomeScreen
-//   },
-//   Notifications:{
-//     screen: Notifications
-//   }
-// }, {
-//   animationEnabled: true
-// })
 
 export default Notifications
