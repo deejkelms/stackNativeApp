@@ -5,6 +5,9 @@ import {
   View,
   Button
 } from 'react-native'
+import { StackNavigator } from 'react-navigation'
+import HomeScreen from './HomeScreen'
+
 
 class LoginScreen extends Component {
   render() {
@@ -19,4 +22,15 @@ class LoginScreen extends Component {
   }
 }
 
-export default LoginScreen
+const LoginStackNavigator = StackNavigator({
+  LoginScreen:{
+    screen: LoginScreen
+  },
+  HomeScreen:{
+    screen: HomeScreen
+  }
+}, {
+  animationEnabled: true
+})
+
+export default LoginStackNavigator
